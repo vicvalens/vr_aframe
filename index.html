@@ -31,9 +31,8 @@
       </a-assets>
 
       <!-- Cámara -->
-      <a-entity id="rig" movement-controls position="0 1.6 0">
-        <a-entity camera look-controls></a-entity>
-        <!-- VR -->
+      <a-entity id="rig" movement-controls="controls: gamepad,keyboard" position="0 1.6 0">
+        <a-entity id="camera" camera look-controls wasd-controls></a-entity>
         <a-entity laser-controls="hand: left" raycaster="objects: .interactable"></a-entity>
         <a-entity laser-controls="hand: right" raycaster="objects: .interactable"></a-entity>
       </a-entity>
