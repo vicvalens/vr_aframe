@@ -30,7 +30,12 @@
       </a-assets>
 
       <!-- Cámara -->
-      <a-entity camera look-controls wasd-controls position="0 1.6 0"></a-entity>
+      <a-entity id="rig" movement-controls position="0 1.6 0">
+        <a-entity camera look-controls></a-entity>
+        <!-- VR -->
+        <a-entity laser-controls="hand: left" raycaster="objects: .interactable"></a-entity>
+        <a-entity laser-controls="hand: right" raycaster="objects: .interactable"></a-entity>
+      </a-entity>
 
       <!-- Cursor -->
       <a-entity 
