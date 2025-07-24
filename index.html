@@ -13,9 +13,9 @@
         schema: { target: { type: 'vec3' } },
         init: function () {
           this.el.addEventListener('click', () => {
-            const camera = document.querySelector('[camera]');
-            if (!camera) return;
-            camera.setAttribute('position', this.data.target);
+            const rig = document.querySelector('#rig');
+            if (!rig) return;
+            rig.setAttribute('position', this.data.target);
           });
         }
       });
