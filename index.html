@@ -14,8 +14,7 @@
         init: function () {
           this.el.addEventListener('click', () => {
             const rig = document.querySelector('#rig');
-            if (!rig) return;
-            rig.setAttribute('position', this.data.target);
+            if (rig) rig.setAttribute('position', { x: 5, y: 1.6, z: 0 });
           });
         }
       });
